@@ -35,7 +35,7 @@ var serve = function() {
         var isAddressAlreadyInUse = Boolean(stderr.match(/EADDRINUSE/));
 
         var msg = 'サーバーを起動できませんでした。\n' + (isAddressAlreadyInUse ?
-            '既にサーバーが立ち上がっているか、8000 番ポートが既に使用されています。' : stderr);
+            '既にサーバーが立ち上がっているか、3000 番ポートが既に使用されています。' : stderr);
 
         gutil.log(gutil.colors.red(msg));
       });
@@ -46,6 +46,6 @@ var serve = function() {
 };
 
 
-serve.PORT = process.env.PORT || 8000;
+serve.PORT = process.env.PORT || 3000;
 
 module.exports = serve;

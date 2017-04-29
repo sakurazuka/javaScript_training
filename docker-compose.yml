@@ -1,0 +1,9 @@
+version: '2'
+services:
+  javascript_training:
+    build: .
+    command: npm start
+    volumes:
+      - .:/javascript_training
+    ports:
+      - "3000:3000"
